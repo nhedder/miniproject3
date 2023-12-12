@@ -7,11 +7,18 @@ router.get("/", (req, res) => {
 });
 
 router.post("/create", (req, res) => {
-    Controllers.descriptionController.createDescription(req.body, res);
+    Controllers.descriptionController.createDescriptions(req.body, res);
 });
 
 router.get('/user/:uid', (req, res) => { // dynamic 
-    Controllers.descriptionController.getUserDescriptions(req, res);
+    Controllers.descriptionController.getUserDescription(req, res);
 })
+
+router.put("/:id", (req, res) => {
+    Controllers.descriptionController.updateDescription(req, res);
+  });
+  router.delete("/:id", (req, res) => {
+    Controllers.descriptionController.deleteDescription(req, res);
+  });
 
 module.exports = router;

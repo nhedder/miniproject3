@@ -1,4 +1,5 @@
 module.exports={
     wordController: require('./wordController'),
-    descriptionController: require('./descriptionController')
+    descriptionController: require('./descriptionController'),
+    populateController: require('./populateController')
     }

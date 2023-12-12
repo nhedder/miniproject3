@@ -6,6 +6,11 @@ router.get("/", (req, res) => {
   Controllers.wordController.getWords(res);
 });
 
+
+router.get("/init/:wordId", (req, res) => {
+  Controllers.populateController.storeWord(req, res);
+});
+
 router.post("/create", (req, res) => {
   Controllers.wordController.createWords(req.body, res);
 });
